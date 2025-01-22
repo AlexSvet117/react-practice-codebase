@@ -1,14 +1,15 @@
-function SampleComponent() {
+function SampleComponent({title, description, display}) {
   return (
-    <div>
+    display && (
+    <div className="w-25">
     <div className="card">
         <div className="card-body">
-            <h3 className="card-title">Component</h3>
-            <p className="card-text">This is our component</p>
+            <h3 className="card-title">{title}</h3>
+            <p className="card-text">{description}</p>
         </div>
       
     </div>
-    </div>
+    </div>)
   )
 }
 
